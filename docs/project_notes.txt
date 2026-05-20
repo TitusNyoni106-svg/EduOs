@@ -1,0 +1,11 @@
+EduOS Project
+
+Features completed:
+- Process creation
+- Process stopping
+- Process display
+
+Next:
+- Scheduler
+- Controllers
+- Python integration
