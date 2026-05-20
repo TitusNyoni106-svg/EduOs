@@ -14,5 +14,6 @@ typedef struct {
 
 void createProcess(Process *p, int pid, const char name[]);
 void showProcess(Process p);
+void stopProcess(Process *p);
 
 #endif

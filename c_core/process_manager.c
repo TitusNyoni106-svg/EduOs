@@ -14,4 +14,7 @@ void showProcess(Process p) {
     printf("PID: %d\n", p.pid);
     printf("Name: %s\n", p.name);
     printf("State: %s\n", p.state == 1 ? "Running" : "Stopped");
+    
+}void stopProcess(Process *p) {
+    p->state = 0;
 }
