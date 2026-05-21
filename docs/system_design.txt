@@ -1,0 +1,19 @@
+EduOS System Design
+--------------------
+
+1. Kernel Layer
+- Handles core system operations
+- Manages memory and CPU scheduling
+
+2. Controller Layer
+- Manages process execution
+- Communicates with scheduler
+
+3. Scheduler
+- Controls process order
+- Starts and stops tasks
+
+4. Future Modules
+- File system
+- User interface
+- Security layer
