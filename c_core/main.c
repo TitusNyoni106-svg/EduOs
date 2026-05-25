@@ -1,25 +1,29 @@
 #include <stdio.h>
 #include "eduos.h"
 
-void createProcess(Process *p, int pid, const char name[]);
-void showProcess(Process p);
-void stopProcess(Process *p);
-
-
+void fcfs(Process p[], int n);
 
 int main() {
 
-    Process p1, p2, p3;
+    Process p[3];
 
-    createProcess(&p1, 1, "System Idle");
-    createProcess(&p2, 2, "User App");
-    createProcess(&p3, 3, "File Manager");
-     
-    stopProcess(&p2);
+    createProcess(&p[0], 1, "System Idle", 5, 1);
+    createProcess(&p[1], 2, "User App", 8, 3);
+    createProcess(&p[2], 3, "File Manager", 3, 2);
 
-    showProcess(p1);
-    showProcess(p2);
-    showProcess(p3);
+    printf("=== BEFORE SCHEDULING ===\n");
+
+    for (int i = 0; i < 3; i++) {
+        showProcess(p[i]);
+    }
+
+    fcfs(p, 3);
+
+    printf("\n=== AFTER SCHEDULING ===\n");
+
+    for (int i = 0; i < 3; i++) {
+        showProcess(p[i]);
+    }
 
     return 0;
 }

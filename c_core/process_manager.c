@@ -2,19 +2,31 @@
 #include <string.h>
 #include "eduos.h"
 
-
-void createProcess(Process *p, int pid, const char name[]) {
+void createProcess(Process *p, int pid, const char name[], int burst, int priority) {
     p->pid = pid;
     strcpy(p->name, name);
-    p->state = 1; // running
+
+    p->state = READY;
+
+    p->burst_time = burst;
+    p->priority = priority;
 }
 
-
 void showProcess(Process p) {
-    printf("PID: %d\n", p.pid);
+    printf("\nPID: %d\n", p.pid);
     printf("Name: %s\n", p.name);
-    printf("State: %s\n", p.state == 1 ? "Running" : "Stopped");
-    
-}void stopProcess(Process *p) {
-    p->state = 0;
+
+    if (p.state == READY)
+        printf("State: READY\n");
+    else if (p.state == RUNNING)
+        printf("State: RUNNING\n");
+    else if (p.state == TERMINATED)
+        printf("State: TERMINATED\n");
+
+    printf("Burst Time: %d\n", p.burst_time);
+    printf("Priority: %d\n", p.priority);
+}
+
+void stopProcess(Process *p) {
+    p->state = TERMINATED;
 }
