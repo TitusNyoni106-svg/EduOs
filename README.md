@@ -124,7 +124,6 @@ Run: valgrind --leak-check=full ./eduos
 ==XXXXX== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ```
 
-> Paste your actual valgrind output here after running `make memcheck`.
 
 ---
 
@@ -181,9 +180,5 @@ pid,name,arrival_time,burst_time,priority
 
 ---
 
-## Bonus
 
-- Thread scheduling mode with context-switch overhead (`--mode thread`)
-- Ageing implementation in Priority Scheduling (every 3 time units)
-- Deadlock detection and fix demonstration with consistent lock ordering
-- Producer-Consumer with semaphores (`sem_init`, `sem_wait`, `sem_post`)
+
