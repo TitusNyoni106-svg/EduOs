@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-05-27T19:28:42.230715",
+  "module": "CS 2104 \u2013 Operating Systems",
+  "student": "Titus Nyoni",
+  "simulator": "EduOS v1.0",
+  "pcb_count": 4,
+  "algorithms": {
+    "FCFS": {
+      "avg_wt": 7.0,
+      "avg_tat": 12.75,
+      "avg_rt": 7.0,
+      "cpu_util": 100.0
+    },
+    "SJF": {
+      "avg_wt": 6.75,
+      "avg_tat": 12.5,
+      "avg_rt": 6.75,
+      "cpu_util": 100.0
+    },
+    "Priority": {
+      "avg_wt": 7.0,
+      "avg_tat": 12.75,
+      "avg_rt": 7.0,
+      "cpu_util": 100.0
+    },
+    "RR(q=2)": {
+      "avg_wt": 11.75,
+      "avg_tat": 17.5,
+      "avg_rt": 3.0,
+      "cpu_util": 100.0
+    },
+    "RR(q=4)": {
+      "avg_wt": 10.75,
+      "avg_tat": 16.5,
+      "avg_rt": 6.0,
+      "cpu_util": 100.0
+    }
+  },
+  "charts": {
+    "gantt_fcfs": "/home/claude/EduOS/docs/screenshots/gantt_FCFS.png",
+    "gantt_sjf": "/home/claude/EduOS/docs/screenshots/gantt_SJF.png",
+    "gantt_priority": "/home/claude/EduOS/docs/screenshots/gantt_Priority.png",
+    "gantt_rr": "/home/claude/EduOS/docs/screenshots/gantt_RRq2.png",
+    "comparison": "/home/claude/EduOS/docs/screenshots/comparison_all_algorithms.png"
+  }
+}
